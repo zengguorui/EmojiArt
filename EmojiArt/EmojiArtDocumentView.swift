@@ -27,25 +27,22 @@ struct EmojiArtDocumentView: View {
                 ZStack {
                     Color.white
                         .overlay(
-                            Group {
-                                if documennt.backgroundImage != nil {
-                                    Image(uiImage: documennt.backgroundImage!)
-                                }
-                            }
+                            OptionalImage(uiImage: documennt.backgroundImage)
                         )
-                        .edgesIgnoringSafeArea([.horizontal, .bottom])
-                        .onDrop(of: ["public.image", "public.text"], isTargeted: nil) { providers, location in
-                            var location = geomotry.convert(location, from: .global)
-                            location = CGPoint(x: location.x - geomotry.size.width/2, y: location.y - geomotry.size.height/2)
-                            print(location)
-                            return drop(providers: providers, at: location)
-                    }
                     
                     ForEach(documennt.emojis) { emoji in
                         Text(emoji.text)
                             .font(font(for: emoji))
                             .position(position(for: emoji, in: geomotry.size))
                     }
+                }
+                .clipped()
+                .edgesIgnoringSafeArea([.horizontal, .bottom])
+                .onDrop(of: ["public.image", "public.text"], isTargeted: nil) { providers, location in
+                    var location = geomotry.convert(location, from: .global)
+                    location = CGPoint(x: location.x - geomotry.size.width/2, y: location.y - geomotry.size.height/2)
+                    print(location)
+                    return drop(providers: providers, at: location)
                 }
             }
         }
