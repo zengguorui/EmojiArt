@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class EmojiArtDocumengtVM: ObservableObject {
+class EmojiArtDocumentVM: ObservableObject {
     static let palette: String = "🦆🦉🦇🐝🐞🐣🐓🐩🐛"
     
     @Published private var emojiArtModel: EmojiArtModel {
@@ -15,7 +15,7 @@ class EmojiArtDocumengtVM: ObservableObject {
             objectWillChange.send()
         }
         didSet {
-            UserDefaults.standard.set(emojiArtModel.json, forKey: EmojiArtDocumengtVM.untitled)
+            UserDefaults.standard.set(emojiArtModel.json, forKey: EmojiArtDocumentVM.untitled)
             print("json = \(emojiArtModel.json?.utf8 ?? "nil")")
         }
     }
@@ -23,7 +23,7 @@ class EmojiArtDocumengtVM: ObservableObject {
     private static let untitled = "EmojiArtDocument.Untitled"
     
     init() {
-        emojiArtModel = EmojiArtModel(json: UserDefaults.standard.data(forKey: EmojiArtDocumengtVM.untitled)) ?? EmojiArtModel()
+        emojiArtModel = EmojiArtModel(json: UserDefaults.standard.data(forKey: EmojiArtDocumentVM.untitled)) ?? EmojiArtModel()
         fetchBackgroundImageData()
     }
     
@@ -68,4 +68,9 @@ class EmojiArtDocumengtVM: ObservableObject {
             
         }
     }
+}
+
+extension EmojiArtModel.Emoji {
+    var fontSize: CGFloat { CGFloat(self.size) }
+    var location: CGPoint { CGPoint(x: CGFloat(x), y: CGFloat(y)) }
 }

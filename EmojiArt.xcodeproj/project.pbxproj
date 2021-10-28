@@ -18,6 +18,7 @@
 		F8312307272808CE00D4E328 /* EmojiArtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8312306272808CE00D4E328 /* EmojiArtModel.swift */; };
 		F831230B2728132700D4E328 /* EmojiArtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F831230A2728132700D4E328 /* EmojiArtExtensions.swift */; };
 		F831230D2729675C00D4E328 /* OptionalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F831230C2729675C00D4E328 /* OptionalImage.swift */; };
+		F831230F272A76F400D4E328 /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F831230E272A76F300D4E328 /* AnimatableSystemFontModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F8312306272808CE00D4E328 /* EmojiArtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtModel.swift; sourceTree = "<group>"; };
 		F831230A2728132700D4E328 /* EmojiArtExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiArtExtensions.swift; sourceTree = "<group>"; };
 		F831230C2729675C00D4E328 /* OptionalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalImage.swift; sourceTree = "<group>"; };
+		F831230E272A76F300D4E328 /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				F83123042727FE0C00D4E328 /* EmojiArtDocumentVM.swift */,
 				F8312306272808CE00D4E328 /* EmojiArtModel.swift */,
 				F831230A2728132700D4E328 /* EmojiArtExtensions.swift */,
+				F831230E272A76F300D4E328 /* AnimatableSystemFontModifier.swift */,
 				F83122DE2727FD9300D4E328 /* Assets.xcassets */,
 				F83122E02727FD9300D4E328 /* Preview Content */,
 			);
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F831230F272A76F400D4E328 /* AnimatableSystemFontModifier.swift in Sources */,
 				F83122DD2727FD9100D4E328 /* EmojiArtDocumentView.swift in Sources */,
 				F83123052727FE0C00D4E328 /* EmojiArtDocumentVM.swift in Sources */,
 				F831230B2728132700D4E328 /* EmojiArtExtensions.swift in Sources */,
