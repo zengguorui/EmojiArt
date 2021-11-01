@@ -88,7 +88,7 @@ class EmojiArtDocumentVM: ObservableObject {
                 }
                 .receive(on: DispatchQueue.main)
                 .replaceError(with: nil)
-                .assign(to: \EmojiArtDocumentVM.backgroundImage, on: self)
+                .assign(to: \.backgroundImage, on: self)
         }
     }
 }
