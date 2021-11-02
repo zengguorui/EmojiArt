@@ -11,6 +11,11 @@ struct EmojiArtDocumentView: View {
     @ObservedObject var document: EmojiArtDocumentVM
     @State private var chosenPalette: String = ""
     
+//    init(document: EmojiArtDocumentVM) {
+//        self.document = document
+//        _chosenPalette = State(warppedValue: self.document.defaultPalette)
+//    }
+    
     var body: some View {
         VStack {
             HStack {
