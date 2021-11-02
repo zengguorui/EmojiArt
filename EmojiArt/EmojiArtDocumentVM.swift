@@ -46,6 +46,9 @@ class EmojiArtDocumentVM: ObservableObject, Hashable, Identifiable {
     
     @Published private(set) var backgroundImage: UIImage?
     
+    @Published var steadyStateZoomScale: CGFloat = 1.0
+    @Published var steadyStatePanOffset: CGSize = .zero
+    
     var emojis: [EmojiArtModel.Emoji] {emojiArtModel.emojis }
     
     func addEmoji(_ emoji: String, at location: CGPoint, size: CGFloat) {
